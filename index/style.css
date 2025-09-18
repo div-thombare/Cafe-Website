@@ -1,0 +1,252 @@
+/* 🎨 Color palette from logo */
+:root {
+  --teal: #2d8575;
+  --coral: #e57a57;
+  --cream: #f6f1e9;
+  --dark: #222;
+  --gradient: linear-gradient(135deg, #2d8575, #e57a57);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* 🌟 Header */
+header {
+  background: var(--gradient);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
+  height: 80px;
+  margin-bottom: 0.5rem;
+  animation: bounceIn 1.5s ease;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cream);
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: var(--cream);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ✨ Section Styling */
+section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: var(--teal);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 🖼️ Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: var(--coral);
+  color: var(--cream);
+  border-radius: 15px;
+  width: 180px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card p {
+  margin: 0.8rem 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+/* Colors & Base Styles from before */
+:root {
+  --teal: #2d8575;
+  --coral: #e57a57;
+  --cream: #f6f1e9;
+  --dark: #222;
+  --gradient: linear-gradient(135deg, #e57a57, #2d8575);
+}
+
+/* --- Franchise Section --- */
+#franchise {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#franchise h2 {
+  text-align: center;
+  color: var(--coral);
+  margin-bottom: 1rem;
+}
+
+#franchise ul {
+  list-style: none;
+  padding: 0;
+}
+
+#franchise li {
+  background: var(--cream);
+  border-left: 5px solid var(--teal);
+  margin: 0.8rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+#franchise li:hover {
+  transform: translateX(5px);
+}
+
+#franchise ul ul li {
+  background: var(--coral);
+  color: var(--cream);
+  border-left: 5px solid var(--dark);
+  font-weight: 600;
+}
+
+/* --- Contact Section --- */
+#contact {
+  background: var(--gradient);
+  color: var(--cream);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+#contact h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+#contact strong {
+  font-size: 1.3rem;
+  background: #fff2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+#contact .icons {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#contact .icons span {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#contact .icons span:hover {
+  transform: scale(1.2);
+}
+
+
+/* 📌 Footer */
+footer {
+  background: var(--gradient);
+  color: var(--cream);
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
